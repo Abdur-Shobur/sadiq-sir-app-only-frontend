@@ -26,7 +26,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home') }}#about">
+                    <a class="nav-link" href="{{ route('home') }}/#about">
                         <span class="rolling-text"> About </span>
                     </a>
                 </li>
@@ -41,7 +41,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home') }}#events">
+                    <a class="nav-link" href="{{ route('home') }}/#events">
                         <span class="rolling-text"> Events </span>
                     </a>
                 </li>
@@ -49,7 +49,7 @@
         </div>
 
         <div class="contact-button">
-            <a href="{{ route('home') }}#contact" class="butn butn-sm butn-bg main-colorbg radius-5">
+            <a href="{{ route('home') }}/#contact" class="butn butn-sm butn-bg main-colorbg radius-5">
                 <span class="text">Let's contact</span>
             </a>
         </div>

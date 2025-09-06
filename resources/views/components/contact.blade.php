@@ -16,7 +16,7 @@
                     </div>
                     <div class="morinfo mt-30 pb-30 bord-thin-bottom">
                         <h6 class="mb-15">Email</h6>
-                        <p><a href="mailto:{{ $profileData->email ?? 'Support@uithemez.com' }}">{{ $profileData->email ?? 'Support@uithemez.com' }}</a></p>
+                        <p><a href="mailto:{{ $profileData->email ?? 'Support@test.com' }}">{{ $profileData->email ?? 'Support@test.com' }}</a></p>
                     </div>
 
                     <div class="social-icon mt-50">

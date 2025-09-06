@@ -28,6 +28,11 @@
     @vite(['resources/css/style.css'])
 
     @stack('styles')
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body>
@@ -45,8 +50,8 @@
     @include('components.navbar')
     <!-- ==================== End Navbar ==================== -->
 
-    <div id="smooth-wrapper">
-        <div id="smooth-content">
+    <div class='position-relative' >
+        <div >
             <main class="main-bg o-hidden">
                 @yield('content')
             </main>
