@@ -25,7 +25,7 @@
                             <a href="#">{{ $blog->created_at->format('F d, Y') }}</a>
                         </div>
                     </div>
-                    <div class="img fit-img">
+                    <div class="img fit-img" style="background: #191919;">
                         @if($blog->image_url)
                             <img src="{{ $blog->image_url }}" alt="{{ $blog->title }}" />
                         @else
@@ -33,8 +33,9 @@
                         @endif
                     </div>
                     <div class="cont pt-30">
+                        <a href="{{ route('blogs.show', $blog->id) }}">
                         <h5>{{ Str::limit($blog->title, 50) }}</h5>
-                        <p class="mb-20">{{ Str::limit($blog->excerpt ?? $blog->content, 100) }}</p>
+                        </a>
                         <a href="{{ route('blogs.show', $blog->id) }}" class="butn-crev d-flex align-items-center mt-30">
                             <span class="hover-this">
                                 <span class="circle hover-anim">
