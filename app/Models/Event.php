@@ -4,8 +4,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Event extends Model
-{
+class Event extends Model {
     use HasFactory;
 
     protected $fillable = [
@@ -27,41 +26,34 @@ class Event extends Model
         'is_active'  => 'boolean',
     ];
 
-    public function scopeActive($query)
-    {
-        return $query->where('is_active', true);
+    public function scopeActive( $query ) {
+        return $query->where( 'is_active', true );
     }
 
-    public function scopeOrdered($query)
-    {
-        return $query->orderBy('order', 'asc')->orderBy('created_at', 'desc');
+    public function scopeOrdered( $query ) {
+        return $query->orderBy( 'order', 'asc' )->orderBy( 'created_at', 'desc' );
     }
 
-    public function scopeUpcoming($query)
-    {
-        return $query->where('status', 'upcoming');
+    public function scopeUpcoming( $query ) {
+        return $query->where( 'status', 'upcoming' );
     }
 
-    public function scopePast($query)
-    {
-        return $query->where('status', 'past');
+    public function scopePast( $query ) {
+        return $query->where( 'status', 'past' );
     }
 
-    public function getImageUrlAttribute()
-    {
-        if ($this->image) {
-            return env('LAB_URL') . '/storage/' . $this->image;
+    public function getImageUrlAttribute() {
+        if ( $this->image ) {
+            return env( 'LAB_URL' ) . '/uploads/' . $this->image;
         }
         return null;
     }
 
-    public function getFormattedEventDateAttribute()
-    {
-        return $this->event_date ? $this->event_date->format('M d, Y') : null;
+    public function getFormattedEventDateAttribute() {
+        return $this->event_date ? $this->event_date->format( 'M d, Y' ) : null;
     }
 
-    public function getFormattedEventTimeAttribute()
-    {
-        return $this->event_time ? $this->event_time->format('h:i A') : null;
+    public function getFormattedEventTimeAttribute() {
+        return $this->event_time ? $this->event_time->format( 'h:i A' ) : null;
     }
 }

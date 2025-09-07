@@ -10,10 +10,10 @@
                 <div class="item">
                     @if($gallery->image)
                     <div class="img mb-30">
-                        <img src="{{ asset('storage/' . $gallery->image) }}" alt="{{ $gallery->title }}" class="w-100" />
+                        <img src="{{ asset('uploads/' . $gallery->image) }}" alt="{{ $gallery->title }}" class="w-100" />
                     </div>
                     @endif
-                    
+
                     <div class="cont">
                         <div class="info sub-title p-color d-flex align-items-center mb-30">
                             <div>
@@ -23,9 +23,9 @@
                                 <a href="#">{{ $gallery->created_at->format('F d, Y') }}</a>
                             </div>
                         </div>
-                        
+
                         <h2 class="mb-30">{{ $gallery->title }}</h2>
-                        
+
                         @if($gallery->description)
                         <div class="description">
                             <p>{{ $gallery->description }}</p>
@@ -34,7 +34,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-lg-4">
                 <div class="sidebar">
                     <div class="widget mb-50">
@@ -46,12 +46,12 @@
                                 ->take(5)
                                 ->get();
                         @endphp
-                        
+
                         @foreach($recentGalleries as $recentGallery)
                         <div class="item mb-20">
                             <div class="img">
                                 @if($recentGallery->image)
-                                    <img src="{{ asset('storage/' . $recentGallery->image) }}" alt="{{ $recentGallery->title }}" />
+                                    <img src="{{ asset('uploads/' . $recentGallery->image) }}" alt="{{ $recentGallery->title }}" />
                                 @else
                                     <img src="{{ asset('assets/imgs/works/default.jpg') }}" alt="{{ $recentGallery->title }}" />
                                 @endif

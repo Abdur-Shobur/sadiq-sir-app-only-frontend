@@ -35,7 +35,7 @@
                 <div class="item mb-50">
                     <div class="img">
                         @if($gallery->image)
-                            <img src="{{ asset('storage/' . $gallery->image) }}" alt="{{ $gallery->title }}" />
+                            <img src="{{ asset('uploads/' . $gallery->image) }}" alt="{{ $gallery->title }}" />
                         @else
                             <img src="{{ asset('assets/imgs/works/default.jpg') }}" alt="{{ $gallery->title }}" />
                         @endif

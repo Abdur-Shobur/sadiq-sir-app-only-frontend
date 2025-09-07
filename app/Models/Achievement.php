@@ -4,8 +4,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Achievement extends Model
-{
+class Achievement extends Model {
     use HasFactory;
 
     protected $table = 'achievements';
@@ -23,20 +22,17 @@ class Achievement extends Model
         'is_active' => 'boolean',
     ];
 
-    public function scopeActive($query)
-    {
-        return $query->where('is_active', true);
+    public function scopeActive( $query ) {
+        return $query->where( 'is_active', true );
     }
 
-    public function scopeOrdered($query)
-    {
-        return $query->orderBy('created_at', 'desc');
+    public function scopeOrdered( $query ) {
+        return $query->orderBy( 'created_at', 'desc' );
     }
 
-    public function getImageUrlAttribute()
-    {
-        if ($this->image) {
-            return env('LAB_URL') . '/storage/' . $this->image;
+    public function getImageUrlAttribute() {
+        if ( $this->image ) {
+            return env( 'LAB_URL' ) . '/uploads/' . $this->image;
         }
         return null;
     }

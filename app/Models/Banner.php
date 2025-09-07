@@ -4,8 +4,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Banner extends Model
-{
+class Banner extends Model {
     use HasFactory;
 
     protected $table = 'portfolio_banners';
@@ -24,21 +23,18 @@ class Banner extends Model
         'is_active' => 'boolean',
     ];
 
-    public function scopeActive($query)
-    {
-        return $query->where('is_active', true);
+    public function scopeActive( $query ) {
+        return $query->where( 'is_active', true );
     }
 
-    public function scopeOrdered($query)
-    {
-        return $query->orderBy('order', 'asc');
+    public function scopeOrdered( $query ) {
+        return $query->orderBy( 'order', 'asc' );
     }
 
     // Accessor for image URL
-    public function getImageUrlAttribute()
-    {
-        if ($this->image) {
-            return env('LAB_URL') . '/storage/' . $this->image;
+    public function getImageUrlAttribute() {
+        if ( $this->image ) {
+            return env( 'LAB_URL' ) . '/uploads/' . $this->image;
         }
         return null;
     }

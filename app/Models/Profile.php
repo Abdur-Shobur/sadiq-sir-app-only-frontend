@@ -4,8 +4,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Profile extends Model
-{
+class Profile extends Model {
     use HasFactory;
 
     protected $fillable = [
@@ -16,29 +15,25 @@ class Profile extends Model
         'image',
     ];
 
-    public function socialMedia()
-    {
-        return $this->hasMany(SocialMedia::class);
+    public function socialMedia() {
+        return $this->hasMany( SocialMedia::class );
     }
 
-    public function getLogoUrlAttribute()
-    {
-        if ($this->logo) {
-            return env('LAB_URL') . '/storage/' . $this->logo;
+    public function getLogoUrlAttribute() {
+        if ( $this->logo ) {
+            return env( 'LAB_URL' ) . '/uploads/' . $this->logo;
         }
         return null;
     }
 
-    public function getImageUrlAttribute()
-    {
-        if ($this->image) {
-            return env('LAB_URL') . '/storage/' . $this->image;
+    public function getImageUrlAttribute() {
+        if ( $this->image ) {
+            return env( 'LAB_URL' ) . '/uploads/' . $this->image;
         }
         return null;
     }
 
-    public function scopeOrdered($query)
-    {
-        return $query->orderBy('created_at', 'desc');
+    public function scopeOrdered( $query ) {
+        return $query->orderBy( 'created_at', 'desc' );
     }
 }

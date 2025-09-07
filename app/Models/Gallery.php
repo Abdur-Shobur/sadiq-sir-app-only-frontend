@@ -4,8 +4,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Gallery extends Model
-{
+class Gallery extends Model {
     use HasFactory;
 
     protected $fillable = [
@@ -22,26 +21,22 @@ class Gallery extends Model
         'is_active' => 'boolean',
     ];
 
-    public function category()
-    {
-        return $this->belongsTo(GalleryCategory::class, 'gallery_category_id');
+    public function category() {
+        return $this->belongsTo( GalleryCategory::class, 'gallery_category_id' );
     }
 
-    public function getImageUrlAttribute()
-    {
-        if ($this->image) {
-            return env('LAB_URL') . '/storage/' . $this->image;
+    public function getImageUrlAttribute() {
+        if ( $this->image ) {
+            return env( 'LAB_URL' ) . '/uploads/' . $this->image;
         }
         return null;
     }
 
-    public function scopeActive($query)
-    {
-        return $query->where('is_active', true);
+    public function scopeActive( $query ) {
+        return $query->where( 'is_active', true );
     }
 
-    public function scopeOrdered($query)
-    {
-        return $query->orderBy('order', 'asc')->orderBy('created_at', 'desc');
+    public function scopeOrdered( $query ) {
+        return $query->orderBy( 'order', 'asc' )->orderBy( 'created_at', 'desc' );
     }
 }

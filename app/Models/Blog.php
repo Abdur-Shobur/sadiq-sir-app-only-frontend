@@ -4,8 +4,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Blog extends Model
-{
+class Blog extends Model {
     use HasFactory;
 
     protected $fillable = [
@@ -24,35 +23,31 @@ class Blog extends Model
     /**
      * Get the blog category that owns the blog.
      */
-    public function category()
-    {
-        return $this->belongsTo(BlogCategory::class, 'blog_category_id');
+    public function category() {
+        return $this->belongsTo( BlogCategory::class, 'blog_category_id' );
     }
 
     /**
      * Scope a query to only include active blogs.
      */
-    public function scopeActive($query)
-    {
-        return $query->where('status', true);
+    public function scopeActive( $query ) {
+        return $query->where( 'status', true );
     }
 
     /**
      * Scope a query to order blogs by latest first.
      */
-    public function scopeLatest($query)
-    {
-        return $query->orderBy('created_at', 'desc');
+    public function scopeLatest( $query ) {
+        return $query->orderBy( 'created_at', 'desc' );
     }
 
     /**
      * Get the blog's image URL.
      */
-    public function getImageUrlAttribute()
-    {
-        if ($this->image) {
-            return env('LAB_URL') . '/storage/' . $this->image;
+    public function getImageUrlAttribute() {
+        if ( $this->image ) {
+            return env( 'LAB_URL' ) . '/uploads/' . $this->image;
         }
-        return env('LAB_URL') . '/assets/img/default-blog.jpg';
+        return env( 'LAB_URL' ) . '/assets/img/default-blog.jpg';
     }
 }

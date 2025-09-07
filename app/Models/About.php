@@ -4,8 +4,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class About extends Model
-{
+class About extends Model {
     use HasFactory;
 
     protected $table = 'portfolio_abouts';
@@ -23,25 +22,22 @@ class About extends Model
         'is_active' => 'boolean',
     ];
 
-    public function scopeActive($query)
-    {
-        return $query->where('is_active', true);
+    public function scopeActive( $query ) {
+        return $query->where( 'is_active', true );
     }
 
     // Accessor for image1 URL
-    public function getImage1UrlAttribute()
-    {
-        if ($this->image1) {
-            return env('LAB_URL') . '/storage/' . $this->image1;
+    public function getImage1UrlAttribute() {
+        if ( $this->image1 ) {
+            return env( 'LAB_URL' ) . '/uploads/' . $this->image1;
         }
         return null;
     }
 
     // Accessor for image2 URL
-    public function getImage2UrlAttribute()
-    {
-        if ($this->image2) {
-            return env('LAB_URL') . '/storage/' . $this->image2;
+    public function getImage2UrlAttribute() {
+        if ( $this->image2 ) {
+            return env( 'LAB_URL' ) . '/uploads/' . $this->image2;
         }
         return null;
     }
