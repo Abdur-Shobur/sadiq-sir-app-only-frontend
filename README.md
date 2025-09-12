@@ -131,4 +131,7 @@ Make sure the following assets are available in the `public/assets/` directory:
 ## License
 
 This project is for educational and personal use.
+
 # sadiq-sir-app-only-frontend
+
+https://myaccount.google.com/apppasswords

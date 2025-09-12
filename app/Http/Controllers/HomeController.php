@@ -27,7 +27,7 @@ class HomeController extends Controller
             'blogs'        => Blog::with('category')->where('status', true)->latest()->take(3)->get(),
             'events'       => Event::latest()->take(5)->get(),
             'galleries'    => Gallery::with('category')->latest()->take(8)->get(),
-            'researches'   => Research::where('is_active', true)->latest()->take(4)->get(),
+            'researches'   => Research::where('is_active', true)->orderBy('order', 'asc')->orderBy('created_at', 'desc')->take(4)->get(),
             'achievements' => Achievement::latest()->take(4)->get(),
             'socialMedia'  => SocialMedia::first(),
         ];

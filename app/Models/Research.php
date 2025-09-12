@@ -4,7 +4,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Research extends Model {
+class Research extends Model
+{
     use HasFactory;
 
     protected $table = 'researches';
@@ -16,20 +17,23 @@ class Research extends Model {
         'image',
         'link',
         'is_active',
+        'order',
     ];
 
     protected $casts = [
         'is_active' => 'boolean',
     ];
 
-    public function scopeActive( $query ) {
-        return $query->where( 'is_active', true );
+    public function scopeActive($query)
+    {
+        return $query->where('is_active', true);
     }
 
     // Accessor for image URL
-    public function getImageUrlAttribute() {
-        if ( $this->image ) {
-            return env( 'LAB_URL' ) . '/uploads/' . $this->image;
+    public function getImageUrlAttribute()
+    {
+        if ($this->image) {
+            return env('LAB_URL') . '/uploads/' . $this->image;
         }
         return null;
     }

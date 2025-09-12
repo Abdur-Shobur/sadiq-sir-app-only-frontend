@@ -1,8 +1,10 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Mail\ContactMessageMail;
 use App\Models\ContactMessage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -16,13 +18,17 @@ class ContactController extends Controller
                 'message' => 'required|string|max:1000',
             ]);
 
-            ContactMessage::create([
+            $contactMessage = ContactMessage::create([
                 'name'    => $request->name,
                 'email'   => $request->email,
                 'subject' => $request->subject,
                 'message' => $request->message,
                 'status'  => 'unread',
             ]);
+
+            // Send email notification
+            $forwardEmail = env('FORWARD_EMAIL_TO', 'abdur.shobur.me@gmail.com');
+            Mail::to($forwardEmail)->send(new ContactMessageMail($contactMessage));
 
             return response()->json([
                 'success' => true,

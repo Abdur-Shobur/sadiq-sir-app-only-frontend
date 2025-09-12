@@ -1,6 +1,6 @@
 <section class="work-grid section-padding pb-0">
     <div class="container">
-        <div class="row mb-80">
+        <div class="row mb-40">
             <div class="col-lg-4">
                 <div class="sec-head">
                     <h6 class="title-bord mb-30">Gallery</h6>

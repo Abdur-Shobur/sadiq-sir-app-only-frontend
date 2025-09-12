@@ -5,7 +5,7 @@
 @section('content')
 <section class="blog style2 section-padding">
     <div class="container">
-        <div class="sec-head mb-80">
+        <div class="sec-head mb-40">
             <div class="d-flex align-items-center">
                 <div>
                     <h3 class="title-bord mb-30">Blog Posts</h3>

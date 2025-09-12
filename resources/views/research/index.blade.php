@@ -7,11 +7,11 @@
 <!-- ==================== Start Blog ==================== -->
 <section class="blog section-padding">
     <div class="container">
-        <div class="sec-head mb-80">
+        <div class="sec-head mb-40">
             <div class="d-flex align-items-center">
                 <div>
                     <h6 class="title-bord mb-30">Research</h6>
-                    <h3 class="fw-600 fz-50 text-u d-rotate wow">Research Areas</h3>
+                    <h3 class="fw-600 fz-30 text-u d-rotate wow">Research Areas</h3>
                 </div>
                  <div class="ml-auto vi-more">
                     <a href="{{ env('LAB_URL') }}/research" class="butn butn-sm butn-bord radius-30">

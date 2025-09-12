@@ -5,7 +5,7 @@
 @if($achievements->count() > 0)
 <section class="services-inline2 section-padding sub-bg bord-bottom-grd bord-top-grd">
     <div class="container ontop">
-        <div class="sec-head mb-80">
+        <div class="sec-head mb-40">
             <div class="d-flex align-items-center">
                 <div>
                     <h6 class="title-bord mb-30">Achievements</h6>

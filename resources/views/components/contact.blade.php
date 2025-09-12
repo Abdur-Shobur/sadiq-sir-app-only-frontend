@@ -8,15 +8,15 @@
             <div class="col-lg-4 valign">
                 <div class="sec-head info-box full-width md-mb80">
                     <div class="phone fz-30 fw-600 underline main-color">
-                        <a href="tel:{{ $profileData->phone ?? '+1 840 841 25 69' }}">{{ $profileData->phone ?? '+1 840 841 25 69' }}</a>
+                        <a href="tel:{{ $profileData->phone ?? '+1 840 841 25 69' }}">{{ $profileData->phone ?? '01111111' }}</a>
                     </div>
                     <div class="morinfo mt-50 pb-30 bord-thin-bottom">
                         <h6 class="mb-15">Address</h6>
-                        <p>{{ $profileData->address ?? 'Besòs 1, 08174 Sant Cugat del Vallès, Barcelona' }}</p>
+                        <p>{{ $profileData->address ?? 'Test Address' }}</p>
                     </div>
                     <div class="morinfo mt-30 pb-30 bord-thin-bottom">
                         <h6 class="mb-15">Email</h6>
-                        <p><a href="mailto:{{ $profileData->email ?? 'Support@test.com' }}">{{ $profileData->email ?? 'Support@test.com' }}</a></p>
+                        <p><a href="mailto:{{ $profileData->email ?? 'test@test.com' }}">{{ $profileData->email ?? 'test@test.com' }}</a></p>
                     </div>
 
                     <div class="social-icon mt-50">

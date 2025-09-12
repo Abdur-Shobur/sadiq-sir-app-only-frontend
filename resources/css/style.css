@@ -1,5 +1,4 @@
 @charset "UTF-8";
- 
 
 /* Variables
 -----------------------------------------------------------------*/
@@ -135,11 +134,11 @@ h1 {
 }
 
 h2 {
-    font-size: 50px;
+    font-size: 30px;
 }
 
 h3 {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 h4 {
@@ -1766,8 +1765,8 @@ img.left {
 }
 
 .section-padding {
-    padding-top: 140px;
-    padding-bottom: 140px;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 
 .section-ptb {
@@ -3832,7 +3831,7 @@ body.loaded {
 }
 
 .intro-crev .img .exp h3 {
-    font-size: 100px;
+    font-size: 80px;
 }
 
 .intro-skill .imgs {
@@ -4924,7 +4923,7 @@ footer.clean-footer.crev .circle-blur {
 }
 
 .crev-header .caption h1 {
-    font-size: 90px;
+    font-size: 80px;
 }
 
 .modern-slider {
@@ -5109,7 +5108,7 @@ footer.clean-footer.crev .circle-blur {
 }
 
 .header-digital .caption h1 {
-    font-size: 100px;
+    font-size: 70px;
 }
 
 .header-digital .img {
@@ -5128,6 +5127,7 @@ footer.clean-footer.crev .circle-blur {
 }
 
 .header-digital .img:after {
+    display: none;
     content: "";
     position: absolute;
     bottom: -1px;
@@ -5138,6 +5138,7 @@ footer.clean-footer.crev .circle-blur {
 }
 
 .header-digital .img:before {
+    display: none;
     content: "";
     position: absolute;
     bottom: -1px;
@@ -5178,7 +5179,7 @@ footer.clean-footer.crev .circle-blur {
 }
 
 .header-digital .cont .numb h2 {
-    margin-bottom: -20px;
+    margin-bottom: -6px;
 }
 
 .header-personal {
@@ -6451,7 +6452,7 @@ footer.clean-footer.crev .circle-blur {
 }
 
 .services-inline2 .item {
-    padding: 50px 0;
+    padding: 40px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -6478,7 +6479,7 @@ footer.clean-footer.crev .circle-blur {
 }
 
 .services-inline2 .item h2 {
-    font-size: 47px;
+    font-size: 30px;
 }
 
 .services-inline2 .item .img {
@@ -6489,7 +6490,7 @@ footer.clean-footer.crev .circle-blur {
 }
 
 .services-inline2 .item .img img {
-    border-radius: 100px;
+    border-radius: 10px;
 }
 
 .services-inline2 .item .img a {
@@ -8271,8 +8272,8 @@ footer.clean-footer.crev .circle-blur {
         margin-bottom: 0 !important;
     }
     .section-padding {
-        padding-top: 100px;
-        padding-bottom: 100px;
+        padding-top: 90px;
+        padding-bottom: 90px;
     }
     .sec-head h3.fz-50 {
         font-size: 30px !important;

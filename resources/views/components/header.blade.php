@@ -5,7 +5,7 @@
 
 <header class="header-digital valign">
     @if($activeBanner && $activeBanner->image_url)
-        <div class="banner-background" style="background-image: url('{{ $activeBanner->image_url }}'); background-size: cover; background-position: center; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1; opacity: 0.3;"></div>
+        <div class="banner-background" style="background-image: url('{{ $activeBanner->image_url }}'); background-size: cover; background-position: center; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1; opacity: 0.2;"></div>
     @endif
 
     <div class="container ontop">

@@ -11,7 +11,7 @@ class ResearchController extends Controller
      */
     public function index()
     {
-        $researches  = Research::where('is_active', true)->latest()->paginate(12);
+        $researches  = Research::where('is_active', true)->orderBy('order', 'asc')->orderBy('created_at', 'desc')->paginate(12);
         $socialMedia = SocialMedia::first();
         return view('research.index', compact('researches', 'socialMedia'));
     }

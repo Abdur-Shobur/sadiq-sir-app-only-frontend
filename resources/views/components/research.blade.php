@@ -1,16 +1,17 @@
-<section class="services section-padding" id="research">
+<section class="services section-padding pb-0 pt-100" id="research">
     <div class="container">
-        <div class="sec-head mb-80">
-            <div class="d-flex align-items-center">
-                <div>
-                    <h6 class="title-bord mb-30">Research</h6>
-                    <h3 class="fw-600 fz-50 text-u d-rotate wow">Research Areas</h3>
-                </div>
-                <div class="ml-auto vi-more">
+        <div class="sec-head mb-40">
+            <div  >
+                <h3 class="fw-600 fz-30 text-u d-rotate wow  mb-30">SI Research Areas</h3>
+                <div class="">
+                    <div class="d-flex align-items-center gap-2">
+                        <div class=" vi-more">
                     <a href="{{ env('LAB_URL') }}/research" class="butn butn-sm butn-bord radius-30">
-                        <span>View All</span>
+                        <span>View All SI Research</span>
                     </a>
                     <i class="icon fas fa-arrow-right"></i>
+                </div>
+                    </div>
                 </div>
             </div>
         </div>

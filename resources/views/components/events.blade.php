@@ -1,16 +1,19 @@
 <section class="feat section-padding" id="events">
     <div class="container ontop">
-        <div class="row">
-            <div class="col-lg-5">
+        <div class="row mb-60">
+            <div class="col-12">
                 <div class="cont md-mb50">
                     <h6 class="title-bord mb-30">Events</h6>
-                    <h3 class="mb-30">Upcoming Events & Highlights</h3>
+                    <h3 class="fw-600 fz-30 text-u d-rotate wow animated">Upcoming Events & Highlights</h3>
                     <p>Stay Informed About Our Latest Workshops, Seminars, and Conferences</p>
                 </div>
             </div>
-            <div class="col-lg-6 offset-lg-1">
-                @forelse($events as $event)
-                <div class="item mb-30">
+        </div>
+
+        <div class="row g-4 justify-content-center">
+        @forelse($events as $event)
+                <div class=" col-md-6 mb-4">
+                    <div class="item">
                     <div class="row">
                         <div class="col-md-4 bg-img" data-background="{{ $event->image_url ? $event->image_url : asset('assets/imgs/serv-img/default.jpg') }}"></div>
                         <div class="col-md-8">
@@ -27,9 +30,10 @@
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
                 @empty
-                <div class="item mb-30">
+                <div class="col-12 item">
                     <div class="row">
                         <div class="col-12">
                             <div class="info text-center">
@@ -40,8 +44,8 @@
                     </div>
                 </div>
                 @endforelse
-            </div>
         </div>
+
     </div>
     <div class="circle-blur">
         <img src="{{ asset('assets/imgs/patterns/blur1.png') }}" alt="" />
