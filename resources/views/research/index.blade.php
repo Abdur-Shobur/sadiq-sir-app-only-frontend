@@ -5,7 +5,7 @@
 @section('content')
 
 <!-- ==================== Start Blog ==================== -->
-<section class="blog section-padding">
+<section class="blog section-padding mt-30">
     <div class="container">
         <div class="sec-head mb-40">
             <div class="d-flex align-items-center">

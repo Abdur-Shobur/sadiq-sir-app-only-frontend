@@ -3,7 +3,7 @@
 @section('title', 'Blog Posts')
 
 @section('content')
-<section class="blog style2 section-padding">
+<section class="blog style2 section-padding mt-30">
     <div class="container">
         <div class="sec-head mb-40">
             <div class="d-flex align-items-center">
