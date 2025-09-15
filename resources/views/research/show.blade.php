@@ -5,7 +5,7 @@
 @section('content')
 
 <!-- ==================== Start Blog ==================== -->
-<section class="blog section-padding">
+<section class="blog section-padding mt-30">
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
@@ -29,7 +29,7 @@
                     <!-- Post Image -->
                     @if($research->image)
                     <div class="post-img mb-40">
-                        <img src="{{ Storage::url($research->image) }}" alt="{{ $research->title }}" class="img-fluid">
+                        <img src="{{ $research->image_url }}" alt="{{ $research->title }}" class="img-fluid">
                     </div>
                     @endif
 
@@ -75,7 +75,7 @@
                             <div class="related-post">
                                 <div class="related-post-img">
                                     @if($related->image)
-                                        <img src="{{ Storage::url($related->image) }}" alt="{{ $related->title }}">
+                                        <img src="{{ $research->image_url }}" alt="{{ $related->title }}">
                                     @else
                                         <div class="no-image">
                                             <i class="fas fa-microscope"></i>
@@ -151,6 +151,7 @@
 
 .research-details p {
     margin-bottom: 1.5rem;
+    color: #fff !important;
 }
 
 .research-details ul, .research-details ol {

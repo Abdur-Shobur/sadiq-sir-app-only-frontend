@@ -3,7 +3,7 @@
 @section('title', $blog->title)
 
 @section('content')
-<section class="blog-details section-padding">
+<section class="blog-details section-padding mt-30">
     <div class="container">
         <div class="row">
             <div class="col-lg-8">

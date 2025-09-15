@@ -1,5 +1,6 @@
 @php
     $profileData = $profile ?? \App\Models\Profile::first();
+
 @endphp
 
 <!-- ==================== Start Footer ==================== -->
@@ -32,6 +33,7 @@
 			<div class="col-lg-2">
 				<div class="column md-mb50">
 					<h6 class="sub-title mb-30">Useful Links</h6>
+
 					<ul class="rest fz-14 opacity-7">
 						<li class="mb-15">
 							<a href="/#about">About</a>
@@ -60,7 +62,25 @@
 						<button><span class="fas fa-arrow-right"></span></button>
 					</div>
 					<ul class="rest social-icon d-flex align-items-center">
-						<li class="hover-this cursor-pointer">
+						@php
+							$socialMedia = \App\Models\SocialMedia::getActive();
+						@endphp
+
+						@forelse($socialMedia as $social)
+							<li class="hover-this cursor-pointer">
+								<a class="hover-anim" href="{{ $social->url }}" target="_blank" title="{{ ucfirst($social->platform) }}">
+									<i class="{{ $social->getIconClass() }}"></i>
+								</a>
+							</li>
+						@empty
+							<li class="hover-this cursor-pointer">
+								<a href="#" class="text-muted">
+									<i class="fas fa-share-alt"></i>
+								</a>
+							</li>
+						@endforelse
+
+						<!-- <li class="hover-this cursor-pointer">
 							<a href="#0" class="hover-anim">
 								<i class="fab fa-facebook-f"></i>
 							</a>
@@ -79,7 +99,7 @@
 							<a href="#0" class="hover-anim">
 								<i class="fab fa-instagram"></i>
 							</a>
-						</li>
+						</li> -->
 					</ul>
 				</div>
 			</div>

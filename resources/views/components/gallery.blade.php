@@ -43,11 +43,7 @@
                                 <p class="mt-2">{{ Str::limit($gallery->description, 60) }}</p>
                             @endif
                         </div>
-                        <div class="ml-auto">
-                            <a href="{{ route('galleries.show', $gallery->id) }}">
-                                <span class="fas fa-arrow-right"></span>
-                            </a>
-                        </div>
+
                     </div>
                 </div>
             </div>

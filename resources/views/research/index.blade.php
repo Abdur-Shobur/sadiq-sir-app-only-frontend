@@ -28,8 +28,8 @@
             <div class="col-lg-4 col-md-6 mb-50">
                 <div class="blog-card">
                     <div class="blog-img">
-                        @if($research->image)
-                            <img src="{{ Storage::url($research->image) }}" alt="{{ $research->title }}">
+                      @if($research->image_url)
+                            <img src="{{ $research->image_url }}" alt="{{ $research->title }}">
                         @else
                             <div class="no-image">
                                 <i class="fas fa-microscope"></i>

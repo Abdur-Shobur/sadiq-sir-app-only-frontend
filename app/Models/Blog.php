@@ -48,6 +48,6 @@ class Blog extends Model {
         if ( $this->image ) {
             return env( 'LAB_URL' ) . '/uploads/' . $this->image;
         }
-        return env( 'LAB_URL' ) . '/assets/img/default-blog.jpg';
+        return env( 'LAB_URL' ) . '/assets/img/placeholder.svg';
     }
 }

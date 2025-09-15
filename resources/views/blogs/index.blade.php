@@ -27,8 +27,6 @@
                     <div class="img fit-img" style="background: #191919;">
                         @if($blog->image_url)
                             <img src="{{ $blog->image_url }}" alt="{{ $blog->title }}" />
-                        @else
-                            <img src="{{ asset('assets/imgs/blog/default.jpg') }}" alt="{{ $blog->title }}" />
                         @endif
                     </div>
                     <div class="cont pt-30">
