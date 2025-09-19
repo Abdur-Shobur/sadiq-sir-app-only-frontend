@@ -135,3 +135,11 @@ This project is for educational and personal use.
 # sadiq-sir-app-only-frontend
 
 https://myaccount.google.com/apppasswords
+
+```
+    php artisan cache:clear
+    php artisan route:clear
+    php artisan config:clear
+    php artisan view:clear
+    php artisan optimize:clear
+```
