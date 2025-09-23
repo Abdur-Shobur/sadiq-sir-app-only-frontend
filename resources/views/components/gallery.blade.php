@@ -30,9 +30,9 @@
                 <div class="item mb-50">
                     <div class="img">
                         @if($gallery->image_url)
-                            <img src="{{ $gallery->image_url }}" alt="{{ $gallery->title }}" />
+                            <img class="research-img-300" style="object-fit: cover;" src="{{ $gallery->image_url }}" alt="{{ $gallery->title }}" />
                         @else
-                            <img src="{{ asset('assets/imgs/works/default.jpg') }}" alt="{{ $gallery->title }}" />
+                            <img class="research-img-300" style="object-fit: cover;" src="{{ env('LAB_URL') }}/assets/img/placeholder.svg" alt="{{ $gallery->title }}" />
                         @endif
                     </div>
                     <div class="cont d-flex align-items-end mt-30">

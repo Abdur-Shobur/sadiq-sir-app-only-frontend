@@ -16,7 +16,7 @@
             @forelse($blogs as $blog)
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="item">
-                    <div class="info sub-title p-color d-flex align-items-center mb-20">
+                    <div class="info sub-title p-color d-flex align-items-center mb-20 " style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
                         <div>
                             <a href="#">{{ $blog->category->name ?? 'Uncategorized' }}</a>
                         </div>

@@ -62,7 +62,7 @@
             </div>
             <div class="col-lg-4">
                 <div class="cont">
-                    <div class="text mt-30" style="margin-bottom: 130px;">
+                    <div class="text mt-30 description-area-text"  >
                         @if($activeBanner && $activeBanner->additional_text)
                             <p>{{ $activeBanner->additional_text }}</p>
                         @else

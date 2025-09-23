@@ -13,8 +13,8 @@
         <div class="row g-4 justify-content-center">
         @forelse($events as $event)
                 <div class=" col-md-6 mb-4">
-                    <div class="item">
-                    <div class="row">
+                    <div class="item h-100">
+                    <div class="row h-100">
                         <div class="col-md-4 bg-img" data-background="{{ $event->image_url ? $event->image_url : asset('assets/imgs/serv-img/default.jpg') }}"></div>
                         <div class="col-md-8">
                             <div class="info">

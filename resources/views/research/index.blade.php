@@ -29,7 +29,7 @@
                 <div class="blog-card">
                     <div class="blog-img">
                       @if($research->image_url)
-                            <img src="{{ $research->image_url }}" alt="{{ $research->title }}">
+                            <img style="object-fit: contain;" src="{{ $research->image_url }}" alt="{{ $research->title }}">
                         @else
                             <div class="no-image">
                                 <i class="fas fa-microscope"></i>

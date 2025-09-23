@@ -61,7 +61,7 @@
 						/>
 						<button><span class="fas fa-arrow-right"></span></button>
 					</div>
-					<ul class="rest social-icon d-flex align-items-center">
+					<ul class="rest social-icon d-flex align-items-center gap-1">
 						@php
 							$socialMedia = \App\Models\SocialMedia::getActive();
 						@endphp
@@ -69,7 +69,8 @@
 						@forelse($socialMedia as $social)
 							<li class="hover-this cursor-pointer">
 								<a class="hover-anim" href="{{ $social->url }}" target="_blank" title="{{ ucfirst($social->platform) }}">
-									<i class="{{ $social->getIconClass() }}"></i>
+								<img src="{{ asset('assets/imgs/icon/' . $social->getIconClass()) }}" alt="{{ ucfirst($social->platform) }}" style="width: 20px; height: 20px;">
+
 								</a>
 							</li>
 						@empty

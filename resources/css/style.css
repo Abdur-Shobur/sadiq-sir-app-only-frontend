@@ -2572,6 +2572,9 @@ img.left {
 
 .mt-80 {
     margin-top: 80px !important;
+    @media screen and (max-width: 992px) {
+        margin-top: 40px !important;
+    }
 }
 
 .mt-85 {
@@ -2688,6 +2691,9 @@ img.left {
 
 .mb-100 {
     margin-bottom: 100px !important;
+    @media screen and (max-width: 992px) {
+        margin-bottom: 50px !important;
+    }
 }
 
 .mb-120 {
@@ -3036,6 +3042,10 @@ img.left {
 
 .pt-100 {
     padding-top: 100px !important;
+
+    @media screen and (max-width: 992px) {
+        padding-top: 50px !important;
+    }
 }
 
 .pt-120 {
@@ -3800,6 +3810,14 @@ body.loaded {
     z-index: 3;
 }
 
+.description-area-text {
+    margin-bottom: 130px;
+
+    @media screen and (max-width: 992px) {
+        margin-bottom: 50px;
+    }
+}
+
 /* About Intro
 -----------------------------------------------------------------*/
 
@@ -4110,6 +4128,9 @@ body.loaded {
 .blog.style2 .item {
     padding: 30px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    @media screen and (max-width: 992px) {
+        padding: 15px;
+    }
 }
 
 .blog.style2 .item .fit-img {
@@ -4146,6 +4167,10 @@ body.loaded {
     margin-top: 50px;
     padding: 30px;
     border: 1px solid rgba(255, 255, 255, 0.05);
+
+    @media screen and (max-width: 992px) {
+        padding: 15px;
+    }
 }
 
 .sidebar .widget .title-widget {
@@ -4828,6 +4853,9 @@ footer .subscribe-minimal .social-icon a {
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 footer.clean-footer.crev {
@@ -5105,6 +5133,10 @@ footer.clean-footer.crev .circle-blur {
 .header-digital {
     padding-top: 180px;
     position: relative;
+
+    @media screen and (max-width: 992px) {
+        padding-top: 140px;
+    }
 }
 
 .header-digital .caption h1 {
@@ -6284,6 +6316,9 @@ footer.clean-footer.crev .circle-blur {
     padding: 60px 40px;
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 15px;
+    @media screen and (max-width: 992px) {
+        padding: 30px 20px;
+    }
 }
 
 .services .item-box .icon {
@@ -7734,6 +7769,15 @@ footer.clean-footer.crev .circle-blur {
     height: 70px;
     border-radius: 50%;
 }
+.research-img-300 {
+    height: 300px;
+    width: 100%;
+    object-fit: contain;
+
+    @media screen and (max-width: 992px) {
+        height: 200px;
+    }
+}
 
 /* Videos
 -----------------------------------------------------------------*/
@@ -8272,8 +8316,8 @@ footer.clean-footer.crev .circle-blur {
         margin-bottom: 0 !important;
     }
     .section-padding {
-        padding-top: 90px;
-        padding-bottom: 90px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
     .sec-head h3.fz-50 {
         font-size: 30px !important;

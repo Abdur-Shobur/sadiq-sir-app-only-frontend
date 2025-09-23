@@ -23,11 +23,11 @@
                     @foreach($researches as $research)
                     <div class="swiper-slide">
                         <div class="item-box">
-                            <div class="icon mb-40 opacity-5">
+                            <div class="  mb-40 opacity-5">
                                 @if($research->image_url)
-                                    <img src="{{ $research->image_url }}" alt="{{ $research->title }}" style="width: 60px; height: 60px; object-fit: cover;" />
+                                    <img class="research-img-300" src="{{ $research->image_url }}" alt="{{ $research->title }}"  />
                                 @else
-                                    <img src="{{ asset('assets/imgs/serv-icons/3.png') }}" alt="{{ $research->title }}" />
+                                    <img style="height: 300px;width: 100%;object-fit: cover;" src="{{ env('LAB_URL') }}/assets/img/placeholder.svg" alt="{{ $research->title }}" />
                                 @endif
                             </div>
                             <h5 class="mb-15">
